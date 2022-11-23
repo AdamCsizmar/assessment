@@ -1,3 +1,6 @@
+## Test
+ To run the test, you just have to run the <code>npm test</code> command from the src folder 
+
 # Arabic number conversion tool
 
 Create a web-based solution that converts numeric input into the English phrase of that number. 
