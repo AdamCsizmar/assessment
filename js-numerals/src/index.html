@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arabic Number Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="converter.js" defer></script>
+  </head>
+  <body>
+    <div class="converter-wrapper">
+      <h1>Arabic Number Converter</h1>
+      <div class="converter">
+        <input type="number" id="number" />
+        <button id="convert">Convert</button>
+      </div>
+      <div class="language-selector">
+        <div>
+          <input
+            type="radio" name="language" value="us-en" id="us-en" checked
+          />
+          <label for="us-en">US English</label>
+        </div>
+        <div>
+          <input type="radio" name="language" value="uk-en" id="uk-en" />
+          <label for="uk-en">UK English</label>
+        </div>
+      </div>
+      <div class="result-box">
+        <p>Result:</p>
+        <span class="result" id="result">-</span>
+      </div>
+    </div>
+  </body>
+</html>
