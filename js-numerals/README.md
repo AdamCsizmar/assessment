@@ -1,5 +1,5 @@
 ## Test
- To run the test, you just have to run the <code>npm test</code> command from the src folder 
+ To run the test, you just have to run the <code>npm test</code> command from the js-numerals folder 
 
 # Arabic number conversion tool
 
