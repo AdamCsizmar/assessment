@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+
+  .Header {
+    height: 100px;
+    padding: 20px;
+    color: white;
+    box-shadow: 1px 1px 5px 0px #6a6a6a;
+
+    .Nav {
+      max-width: 900px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      .Nav-button {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: semibold;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+    }
+  }
+}
+
+
+
