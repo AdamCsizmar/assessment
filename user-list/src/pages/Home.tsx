@@ -25,25 +25,27 @@ const Home = () => {
 
   return (
     <div className='UserListWrapper'>
-      <div className='UserList'>
-        {displayedUsers.map((user) => (
-          <UserCard key={user.id} {...user} />
-        ))}
-      </div>
       <div className='Pagination'>
         <button
           onClick={() => setPagination(pagination - 1)}
           disabled={pagination <= 1}
+          className='Pagination-button'
         >
-          <GrLinkPrevious />
+          {"<"}
         </button>
         <span>{pagination}</span>
         <button
           onClick={() => setPagination(pagination + 1)}
           disabled={pagination * 10 >= users.length}
+          className='Pagination-button'
         >
-          <GrLinkNext />
+          {">"}
         </button>
+      </div>
+      <div className='UserList'>
+        {displayedUsers.map((user) => (
+          <UserCard key={user.id} {...user} />
+        ))}
       </div>
     </div>
   );

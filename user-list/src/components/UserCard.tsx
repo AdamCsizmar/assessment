@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { AiOutlineLock, AiOutlineUnlock, AiOutlineEdit } from "react-icons/ai";
+
 export type User = {
   id: number;
   first_name: string;
@@ -8,13 +11,27 @@ export type User = {
 };
 
 const UserCard = (userProps: User) => {
-  const { id, first_name, last_name, status, created_at, updated_at } = userProps;
+  const { id, first_name, last_name, status, created_at, updated_at } =
+    userProps;
+
+  const creationDate = new Date(created_at).toLocaleDateString("en-US");
 
   return (
-  <div className={`UserCard ${status}`}>
-    <h3>{`${first_name} ${last_name}`}</h3>
-    <h4>Registered at: {created_at}</h4>
-  </div>
+    <div className={`UserCard ${status}`}>
+      <div className='Details'>
+        <p>{`${first_name} ${last_name}`}</p>
+        <p>Registered at: {creationDate}</p>
+      </div>
+      <div className='Actions'>
+        <div className='UserAction'>
+          {status === 'active' && <AiOutlineLock />}
+          {status === 'locked' && <AiOutlineUnlock />}
+        </div>
+        <Link to={`/edit?id=${id}`} className='UserAction'>
+          <AiOutlineEdit />
+        </Link>
+      </div>
+    </div>
   );
 };
 
