@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import UserCard, { User } from "../components/UserCard";
 import { getUsers } from "../service/usersService";
-import { GrLinkPrevious, GrLinkNext  } from "react-icons/gr";
-
 
 const Home = () => {
   const [users, setUsers] = useState<User[] | []>([]);
@@ -12,6 +10,7 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const users = await getUsers();
+      
       setUsers(users);
       setDisplayedUsers(users.slice(0, 10));
     })();
@@ -21,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     setDisplayedUsers(users.slice(pagination * 10 - 10, pagination * 10));
     return () => {};
-  }, [pagination]);
+  }, [pagination, users]);
 
   return (
     <div className='UserListWrapper'>

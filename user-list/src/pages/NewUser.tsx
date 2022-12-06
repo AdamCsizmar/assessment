@@ -1,12 +1,9 @@
 import UserDetailForm from "../components/UserDetailForm"
+import { addUser } from "../service/usersService"
 
 const NewUser = () => {
-  const NewUserHandler = () => {
-    console.log("New user")
-  }
-
   return (
-    <UserDetailForm action="Add" cb={NewUserHandler}/>
+    <UserDetailForm action="Add" cb={addUser}/>
   )
 }
 

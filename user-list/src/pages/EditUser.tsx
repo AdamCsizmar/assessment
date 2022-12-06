@@ -1,19 +1,12 @@
 import UserDetailForm from "../components/UserDetailForm"
+import { editUser } from "../service/usersService"
 
 const EditUser = () => {
-  const EditUserHandler = () => {
-    console.log("Edit user")
-  }
-
-  const userDetails = {
-    first_name: "John",
-    last_name: "Doe",
-    id: 1
-  }
-
   return (
-    <UserDetailForm action="Edit" cb={EditUserHandler} />
+    <UserDetailForm action="Edit" cb={editUser} />
   )
 }
 
 export default EditUser
+
+
